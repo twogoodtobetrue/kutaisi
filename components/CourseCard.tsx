@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Course } from '../types';
@@ -11,23 +10,28 @@ interface CourseCardProps {
 
 const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full transform hover:scale-105 transition-transform duration-300">
-      <img src={`https://picsum.photos/seed/${course.id}/600/400`} alt={course.title} className="w-full h-48 object-cover"/>
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-semibold text-brand-red mb-2">{course.title}</h3>
-        <p className="text-sm text-gray-600 mb-1"><i className="fas fa-clock mr-2"></i><strong>Duration:</strong> {course.duration}</p>
-        <p className="text-sm text-gray-600 mb-1"><i className="fas fa-calendar-alt mr-2"></i><strong>Schedule:</strong> {course.schedule}</p>
-        <p className="text-sm text-gray-600 mb-3"><i className="fas fa-lari-sign mr-2"></i><strong>Price:</strong> {course.priceRange}</p>
-        <p className="text-gray-700 text-sm mb-4 flex-grow">{course.description}</p>
-        {course.entryRequirements && <p className="text-xs text-gray-500 mt-auto mb-1"><strong>Entry:</strong> {course.entryRequirements}</p>}
-        {course.targetAudience && <p className="text-xs text-gray-500 mt-auto mb-3"><strong>For:</strong> {course.targetAudience}</p>}
-        <Link
-          to={Page.Contact} // Or a specific registration page if available: Page.Register
-          state={{ interestedCourse: course.title }}
-          className="mt-auto bg-brand-red hover:bg-brand-red-dark text-white font-semibold py-2 px-4 rounded-md text-center transition-colors duration-150 w-full"
-        >
-          Book Placement Test
-        </Link>
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="p-6">
+        <h3 className="text-2xl font-bold text-gray-800 mb-3">{course.title}</h3>
+        <p className="text-gray-600 mb-4">{course.target}</p>
+        <div className="space-y-3 mb-6">
+          <div className="flex items-center text-gray-700">
+            <span className="font-semibold mr-2">Duration:</span>
+            {course.details.duration}
+          </div>
+          <div className="flex items-center text-gray-700">
+            <span className="font-semibold mr-2">Schedule:</span>
+            {course.details.schedule}
+          </div>
+          <div className="flex items-center text-gray-700">
+            <span className="font-semibold mr-2">Level:</span>
+            {course.details.entryLevel}
+          </div>
+        </div>
+        <p className="text-gray-600 mb-6">{course.content}</p>
+        <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors">
+          Learn More
+        </button>
       </div>
     </div>
   );

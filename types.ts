@@ -1,63 +1,92 @@
-
-export interface Teacher {
-  id: string;
+export interface SiteConfig {
   name: string;
-  qualifications: string[];
-  experienceYears: number;
-  specializations: string[];
-  imageUrl: string;
+  email: string;
+  phone: string;
+  address: string;
+  officeHours: {
+    weekdays: string;
+    saturday: string;
+  };
+  socialMedia: {
+    whatsapp: string;
+    viber: string;
+  };
+}
+
+export interface HomePageContent {
+  hero: {
+    headline: string;
+    intro: string;
+    ctaButton: string;
+  };
+}
+
+export interface TeamMember {
+  name: string;
+  role: string;
+  bio: string;
+  certifications?: string[];
+}
+
+export interface AboutContent {
+  story: {
+    title: string;
+    content: string;
+  };
+  differentiators: Array<{
+    title: string;
+    description: string;
+  }>;
+  team: TeamMember[];
+  stats: {
+    examSuccess: string;
+    recommendation: string;
+  };
+}
+
+export interface CourseDetails {
+  duration: string;
+  schedule: string;
+  entryLevel: string;
+  fee: string;
 }
 
 export interface Course {
-  id: string;
   title: string;
-  duration: string;
-  schedule: string;
-  priceRange: string;
-  description: string;
-  entryRequirements?: string;
-  targetAudience?: string; // e.g. Kids & Teens
+  target: string;
+  content: string;
+  details: CourseDetails;
 }
 
 export interface Testimonial {
-  id: string;
-  studentName: string;
+  name: string;
+  achievement: string;
   quote: string;
-  imageUrl: string;
-  achievedScore?: string; // e.g., "IELTS Band 7.5"
 }
 
-export interface CaseStudy {
-  id: string;
-  title: string;
-  studentName: string;
-  problem: string;
-  solution: string;
-  outcome: string;
-  beforeScore?: string;
-  afterScore?: string;
+export interface SuccessStory {
+  spotlight: {
+    title: string;
+    content: string;
+  };
 }
 
 export interface Resource {
-  id: string;
-  type: 'pdf' | 'template' | 'booklist' | 'article' | 'link';
   title: string;
-  description?: string;
-  url?: string; // For external links or downloadable files
-  content?: string; // For blog-style articles
+  link: string;
+  type?: string;
 }
 
 export interface NewsEvent {
-  id: string;
-  type: 'news' | 'event';
   title: string;
-  date?: string; // For events
+  date: string;
+  time?: string;
   description: string;
-  imageUrl?: string;
+  ctaText: string;
+  link: string;
 }
 
 export interface FAQItem {
-  id: string;
   question: string;
   answer: string;
 }

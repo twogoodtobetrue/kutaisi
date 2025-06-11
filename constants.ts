@@ -1,5 +1,211 @@
-
 import { Page, Course, Teacher, Testimonial, CaseStudy, Resource, NewsEvent, FAQItem } from './types';
+
+export const SITE_CONFIG = {
+  name: "Kutaisi English Academy",
+  email: "2022theenglishacademy@gmail.com",
+  phone: "+995 574 13 05 05",
+  address: "Javakhishvili Street 24, Kutaisi, Georgia",
+  officeHours: {
+    weekdays: "Monday - Friday: 10:00 - 19:00",
+    saturday: "Saturday: 11:00 - 15:00"
+  },
+  socialMedia: {
+    whatsapp: "+995 574 13 05 05",
+    viber: "+995 574 13 05 05"
+  }
+};
+
+export const HOMEPAGE_CONTENT = {
+  hero: {
+    headline: "Your Path to International English Success Starts Here",
+    intro: "Welcome to Kutaisi English Academy, the premier private language school in the heart of Kutaisi. We specialize in preparing ambitious students like you for high-stakes international English exams, including IELTS, TOEFL, and the full suite of Cambridge qualifications. Our mission is to provide you with the skills, confidence, and strategy to achieve your academic and professional goals on the world stage.",
+    ctaButton: "Join Our Next Prep Course"
+  }
+};
+
+export const ABOUT_CONTENT = {
+  story: {
+    title: "Our Story: Bridging Georgian Talent with Global Opportunity",
+    content: "Kutaisi English Academy was founded by Lana Chkhartishvili, a passionate educator who saw the immense potential of Georgian students. Her vision was to create a center of excellence in Kutaisi—a place that would bridge the gap between local ambition and international success. We started with a simple mission: to stop students from feeling unprepared for world-class exams and to give them the tools to compete and thrive globally."
+  },
+  differentiators: [
+    {
+      title: "Small, Focused Groups",
+      description: "We believe in quality over quantity. Our small group sizes (max 8 students) ensure you get the individual attention you deserve, can ask questions freely, and actively participate in every class."
+    },
+    {
+      title: "Experienced, Certified Teachers",
+      description: "Our team isn't just fluent in English; they are certified professionals with qualifications like CELTA and TEFL. They are mentors who understand the exams inside-out and are dedicated to your success."
+    },
+    {
+      title: "A Personalized Approach",
+      description: "You are not just a number at our academy. We begin with a detailed placement test to understand your strengths and weaknesses, allowing us to create a learning path that is tailored just for you."
+    }
+  ],
+  team: [
+    {
+      name: "Lana Chkhartishvili",
+      role: "Founding Director & Senior Instructor",
+      bio: "With over 15 years of experience in English language teaching and a Master's degree in Education, Lana is the driving force behind the academy. She specializes in IELTS and Cambridge exam strategy and is passionate about helping every student unlock their potential.",
+      certifications: ["MA in Education", "CELTA"]
+    },
+    {
+      name: "Teo Tsikarishvili",
+      role: "Lead English Language Instructor",
+      bio: "Teo holds a Bachelor's degree in English Language and Literature and is an expert in grammar and academic writing. Her patient and structured teaching style helps students build a rock-solid foundation for exam success.",
+      certifications: ["BA in English", "TKT (Teaching Knowledge Test)"]
+    },
+    {
+      name: "Gio Chkhartishvili",
+      role: "TEFL Certified Instructor",
+      bio: "Gio brings a modern, dynamic energy to the classroom. With a background in Information Technology and a Gold TEFL certification, he is known for his tech-integrated teaching methods that make learning engaging and effective. He is proficient in both English and Russian.",
+      certifications: ["TEFL (Gold Certificate)", "Bachelor's in IT"]
+    },
+    {
+      name: "Nato Babunashvili",
+      role: "Academy Administrator",
+      bio: "Nato is the welcoming face and organizational heart of our academy. From your first inquiry to your final certificate, she ensures your learning journey is smooth and stress-free. For any questions about schedules, payments, or resources, Nato is here to help."
+    }
+  ],
+  stats: {
+    examSuccess: "85% of our students achieve their target exam score or higher on their first attempt.",
+    recommendation: "Rated 100% Recommended by 37+ student reviews on our platform."
+  }
+};
+
+export const COURSES = [
+  {
+    title: "IELTS Preparation",
+    target: "Students aiming to study, work, or immigrate to an English-speaking country.",
+    content: "Master all four modules (Listening, Reading, Writing, Speaking), learn advanced test-taking strategies, practice with authentic exam materials, and receive personalized feedback on your writing and speaking.",
+    details: {
+      duration: "12 Weeks",
+      schedule: "Mon/Wed/Fri, 18:00-20:00",
+      entryLevel: "B1+ (Intermediate)",
+      fee: "Contact for pricing"
+    }
+  },
+  {
+    title: "TOEFL iBT Preparation",
+    target: "Students applying to universities in the USA, Canada, and other institutions that accept TOEFL scores.",
+    content: "Integrated skills practice for the unique TOEFL format, academic vocabulary building, note-taking strategies for lectures, and timed practice for all sections.",
+    details: {
+      duration: "10 Weeks",
+      schedule: "Tue/Thu, 17:00-19:00",
+      entryLevel: "B1+ (Intermediate)",
+      fee: "Contact for pricing"
+    }
+  },
+  {
+    title: "Cambridge Exams (FCE, CAE, CPE)",
+    target: "Learners seeking an internationally recognized certificate of their English proficiency for academic or professional purposes.",
+    content: "In-depth preparation for B2 First, C1 Advanced, or C2 Proficiency exams, focusing on Use of English, complex grammar, and formal writing and speaking structures.",
+    details: {
+      duration: "16 Weeks",
+      schedule: "Contact for schedules",
+      entryLevel: "B2, C1, or C2 (based on exam)",
+      fee: "Contact for pricing"
+    }
+  },
+  {
+    title: "General English",
+    target: "Anyone looking to improve their overall English communication skills for travel, work, or personal development.",
+    content: "A balanced focus on speaking, listening, reading, writing, grammar, and vocabulary, in a communicative and interactive environment.",
+    details: {
+      duration: "Ongoing monthly enrollment",
+      schedule: "Flexible options available",
+      entryLevel: "A1 (Beginner) to C1 (Advanced)",
+      fee: "Contact for pricing"
+    }
+  }
+];
+
+export const TESTIMONIALS = [
+  {
+    name: "Nino G.",
+    achievement: "Achieved IELTS Band 7.5",
+    quote: "The personalized feedback at Kutaisi English Academy was a game-changer for my writing score. I got a 7.0 in Writing, which I never thought was possible! Thank you, Lana and the team. I couldn't have achieved my goal without them!"
+  },
+  {
+    name: "Davit L.",
+    achievement: "Achieved TOEFL 105",
+    quote: "I needed a high TOEFL score for my Master's application in the US. The small group and Gio's dynamic lessons made learning fun and effective. I highly recommend them to anyone serious about their exam."
+  }
+];
+
+export const SUCCESS_STORIES = {
+  spotlight: {
+    title: "How Mariam Got Band 7.5 in IELTS",
+    content: "Mariam came to us with a goal of Band 7.0 but struggled with confidence in the Speaking test and structuring her Writing Task 2 essays. Through our intensive 12-week IELTS course, she participated in weekly mock speaking tests with direct feedback from Teo. Our specialized writing workshops helped her master essay structures. The result? She not only met her goal but exceeded it, scoring an incredible 7.5 overall and an 8.0 in Speaking. Mariam is now preparing to start her Master's in International Relations in London."
+  }
+};
+
+export const RESOURCES = {
+  blogArticles: [
+    {
+      title: "How to Manage Exam Stress and Stay Focused",
+      link: "#"
+    },
+    {
+      title: "5 Common Mistakes to Avoid in the IELTS Speaking Test",
+      link: "#"
+    },
+    {
+      title: "Top 10 Tips & Tricks for the TOEFL Reading Section",
+      link: "#"
+    }
+  ],
+  downloads: [
+    {
+      title: "Your Ultimate 8-Week IELTS Study Planner",
+      type: "PDF",
+      link: "#"
+    }
+  ]
+};
+
+export const NEWS_EVENTS = {
+  upcoming: [
+    {
+      title: "IELTS Evening Prep Course",
+      date: "June 15th",
+      description: "Limited spots are available. Registration closes on June 10th.",
+      ctaText: "Register Now",
+      link: "#"
+    },
+    {
+      title: "Academic Writing Workshop",
+      date: "June 5th",
+      time: "14:00-16:00",
+      description: "Free workshop open to all current and prospective students.",
+      ctaText: "Book Your Spot",
+      link: "#"
+    }
+  ]
+};
+
+export const FAQ = [
+  {
+    question: "How long does it take to prepare for IELTS?",
+    answer: "It depends on your current English level and your target score. For a student at a B1 (Intermediate) level aiming for a 6.5-7.0, our intensive 12-week course is typically sufficient. We determine the best path for you after a free placement test."
+  },
+  {
+    question: "Do you offer individual (one-on-one) lessons?",
+    answer: "Yes, we do! We offer private lessons tailored to your specific needs, whether it's for general English improvement or intensive preparation for a specific exam module. Contact us to discuss a personalized plan."
+  },
+  {
+    question: "What is your refund policy?",
+    answer: "Our refund policy is outlined in our student agreement. In general, course fees are non-refundable after the course has started, but we can offer credit for a future course in exceptional circumstances. Please contact our administrator for full details."
+  },
+  {
+    question: "Do you offer online classes?",
+    answer: "Yes! We offer both in-person classes at our academy in Kutaisi and live online classes via Zoom, so you can learn from anywhere in Georgia."
+  },
+  {
+    question: "How do I register for a course?",
+    answer: "You can start by booking a free placement test on our website. After the test, you can register in person at our office or complete the registration form online. Payment can be made via bank transfer or at our office."
+  }
+];
 
 export const APP_NAME = "Kutaisi English Academy";
 export const CONTACT_EMAIL = "info@kutaisienglish.ge";
